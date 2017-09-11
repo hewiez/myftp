@@ -1,0 +1,30 @@
+----------------------myftp---------------------
+1.概述
+这是一个服务器与客户端间进行文件传输的工具
+2.使用方法
+进入myftp文件夹内，在shell中make一下，即编译成功。
+client文件夹中的client文件在客户端运行，server文件夹中的server文件在服务端运行
+服务端启动服务:
+    进入server目录，键入命令：./server [IPadress]
+客户端连接：
+    进入client目录，键入命令：./client [IPadress]
+3.操作命令
+1）客户端本地指令
+    ls 查看当前路径下的文件
+    pwd 查看本地文件
+    help 获取帮助
+2）与服务端交互指令
+    login 客户端登录(默认客户端连接时即开始登陆，所以客户端无需键入login命令)
+    show 查看服务端当前路径下的文件，相当于ls
+    where 查看服务端当前路径，相当于pwd
+    put <filename> 上传文件
+    get <filename> 下载文件
+    adddir <dirname> 新增一个目录
+    deletedir <dirname> 删除一个目录
+    delete <filename> 删除服务端文件
+    go <path> 跳转路径，相当于cd
+    bye 断开连接
+4.用户
+用户配置请编辑server下的passwd，
+格式为:
+username:password
